@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="BatteryInfo\Battery.cs" />
     <Compile Include="BatteryInfo\BatteryTypes.cs" />
+    <Compile Include="Microphone.cs" />
     <Compile Include="ScreenInfo\DisplayType\ColorScreen.cs" />
     <Compile Include="ScreenInfo\DisplayType\DefaultImage.cs" />
     <Compile Include="ScreenInfo\DisplayType\IScreenImage.cs" />

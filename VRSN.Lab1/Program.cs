@@ -15,6 +15,7 @@ namespace VRSN.Lab1
 
             mob.MobScreen = new SingleTouchScreen(100, 10, 999999, "1024x720", retina);
             mob.MobBattery = new RemovableBattery(BatteryTypes.NickelCadmium, 4100);
+            mob.MobMicro = new Microphone();
 
             Console.WriteLine(mob.MobScreen.ScreenInfo());
             mob.MobScreen.Dysplay.Show(image);
@@ -22,6 +23,11 @@ namespace VRSN.Lab1
 
             Console.WriteLine(mob.MobBattery.ToString());
             Console.WriteLine(mob.MobBattery.Type + " battery with volume of " + mob.MobBattery.Volume);
+
+            mob.MobMicro.Mute = true;
+            mob.MobMicro.Sensetivity = 8;
+            mob.MobMicro.Sensetivity = 200;
+            mob.MobMicro.Sensetivity = 0;
 
             Console.ReadLine();
 

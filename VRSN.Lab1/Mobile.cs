@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace VRSN.Lab1
 {
-    class Mobile {
-        
+    class Mobile {        
         public Screen MobScreen {
             get; set;
         }
@@ -16,8 +15,8 @@ namespace VRSN.Lab1
             get; set;
         }
 
-               
-
-        
+        public Microphone MobMicro {
+            get; set;
+        }     
     }
 }
