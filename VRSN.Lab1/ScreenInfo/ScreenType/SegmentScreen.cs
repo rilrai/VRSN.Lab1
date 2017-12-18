@@ -16,11 +16,12 @@ namespace VRSN.Lab1 {
             Console.WriteLine("The screen has been touched to leterally no effect");
         }
 
-        public SegmentScreen(int height, int width, int numOfColors, string resolution) {
+        public SegmentScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase) {
             Height = height;
             Width = width;
             NumberOfColors = numOfColors;
             Resolution = resolution;
+            Dysplay = screenBase;
         }
 
     }

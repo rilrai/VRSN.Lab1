@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace VRSN.Lab1 {
     class SingleTouchScreen : TouchScreen {
 
-        public SingleTouchScreen(int height, int width, int numOfColors, string resolution) {
+        public SingleTouchScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase) {
             Height = height;
             Width = width;
             NumberOfColors = numOfColors;
             Resolution = resolution;
+            Dysplay = screenBase;
+
         }
 
         public override string Type() {

@@ -11,6 +11,7 @@ namespace VRSN.Lab1
         public int Width { get; set; }
         public int NumberOfColors { get; set; }
         public string Resolution { get; set; }
+        public ScreenBase Dysplay { get; set; }
 
         public string Size() {
             return Height + "x" + Width;
@@ -19,6 +20,7 @@ namespace VRSN.Lab1
         public abstract void Touch();
 
         public abstract string Type();
+
         public string ScreenInfo() {
             var info = new StringBuilder();
             info.AppendLine("Screen parameters are:");
@@ -31,4 +33,6 @@ namespace VRSN.Lab1
         }
 
     }
+
+
 }

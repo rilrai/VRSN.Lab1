@@ -43,27 +43,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Battery.cs" />
-    <Compile Include="BatteryTypes.cs" />
-    <Compile Include="ColorScreen.cs" />
-    <Compile Include="IScreenImage.cs" />
-    <Compile Include="LEDScreen.cs" />
+    <Compile Include="BatteryInfo\Battery.cs" />
+    <Compile Include="BatteryInfo\BatteryTypes.cs" />
+    <Compile Include="ScreenInfo\DisplayType\ColorScreen.cs" />
+    <Compile Include="ScreenInfo\DisplayType\DefaultImage.cs" />
+    <Compile Include="ScreenInfo\DisplayType\IScreenImage.cs" />
+    <Compile Include="ScreenInfo\DisplayType\LEDScreen.cs" />
     <Compile Include="Mobile.cs" />
-    <Compile Include="MonochromeScreen.cs" />
-    <Compile Include="MonolithicBattery.cs" />
+    <Compile Include="ScreenInfo\DisplayType\MonochromeScreen.cs" />
+    <Compile Include="BatteryInfo\MonolithicBattery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemovableBattery.cs" />
-    <Compile Include="RetinaScreen.cs" />
-    <Compile Include="Screen.cs" />
-    <Compile Include="ScreenBase.cs" />
-    <Compile Include="SegmentScreen.cs" />
-    <Compile Include="SingleTouchScreen.cs" />
-    <Compile Include="TouchScreen.cs" />
+    <Compile Include="BatteryInfo\RemovableBattery.cs" />
+    <Compile Include="ScreenInfo\DisplayType\RetinaScreen.cs" />
+    <Compile Include="ScreenInfo\ScreenType\Screen.cs" />
+    <Compile Include="ScreenInfo\DisplayType\ScreenBase.cs" />
+    <Compile Include="ScreenInfo\ScreenType\SegmentScreen.cs" />
+    <Compile Include="ScreenInfo\ScreenType\SingleTouchScreen.cs" />
+    <Compile Include="ScreenInfo\ScreenType\TouchScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
