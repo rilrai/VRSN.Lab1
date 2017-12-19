@@ -52,10 +52,9 @@
     <Compile Include="ScreenInfo\DisplayType\LEDScreen.cs" />
     <Compile Include="Mobile.cs" />
     <Compile Include="ScreenInfo\DisplayType\MonochromeScreen.cs" />
-    <Compile Include="BatteryInfo\MonolithicBattery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BatteryInfo\RemovableBattery.cs" />
+    <Compile Include="ScreenInfo\DisplayType\QualityRates.cs" />
     <Compile Include="ScreenInfo\DisplayType\RetinaScreen.cs" />
     <Compile Include="ScreenInfo\ScreenType\Screen.cs" />
     <Compile Include="ScreenInfo\DisplayType\ScreenBase.cs" />

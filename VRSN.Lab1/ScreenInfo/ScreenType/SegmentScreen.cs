@@ -1,28 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VRSN.Lab1 {
-    class SegmentScreen : Screen {
- 
+namespace VRSN.Lab1
+{
+    class SegmentScreen : Screen 
+    {
 
-        public override string Type() {
+        public override string Type()
+        {
             return "This device has a Segment screen";
         }
 
-        public override void Touch() {
+        public override void Touch() 
+        {
             Console.WriteLine("The screen has been touched to leterally no effect");
         }
 
-        public SegmentScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase) {
+        public SegmentScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase) 
+        {
             Height = height;
             Width = width;
             NumberOfColors = numOfColors;
             Resolution = resolution;
             Dysplay = screenBase;
         }
-
     }
 }

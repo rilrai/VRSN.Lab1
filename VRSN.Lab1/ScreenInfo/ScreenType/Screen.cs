@@ -1,19 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace VRSN.Lab1
 {
-    public abstract class Screen {
+    public abstract class Screen
+    {
+
         public int Height { get; set; }
+
         public int Width { get; set; }
+
         public int NumberOfColors { get; set; }
+
         public string Resolution { get; set; }
+
         public ScreenBase Dysplay { get; set; }
 
-        public string Size() {
+        public string Size() 
+        {
             return Height + "x" + Width;
         }
 
@@ -21,7 +24,8 @@ namespace VRSN.Lab1
 
         public abstract string Type();
 
-        public string ScreenInfo() {
+        public string ScreenInfo()
+        {
             var info = new StringBuilder();
             info.AppendLine("Screen parameters are:");
             info.AppendLine(this.Type());
@@ -31,8 +35,5 @@ namespace VRSN.Lab1
 
             return info.ToString();
         }
-
     }
-
-
 }
