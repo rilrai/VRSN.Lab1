@@ -17,9 +17,11 @@
             get; set;
         }
 
-        public Mobile() 
+        public Mobile(Screen screen, Battery battery, Microphone micro) 
         {
-            // add constructor
+            MobScreen = screen;
+            MobBattery = battery;
+            MobMicro = micro;
         }  
     }
 }

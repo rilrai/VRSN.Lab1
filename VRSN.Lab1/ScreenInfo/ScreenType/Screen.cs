@@ -24,7 +24,7 @@ namespace VRSN.Lab1
 
         public abstract string Type();
 
-        public string ScreenInfo()
+        public override string ToString()
         {
             var info = new StringBuilder();
             info.AppendLine("Screen parameters are:");

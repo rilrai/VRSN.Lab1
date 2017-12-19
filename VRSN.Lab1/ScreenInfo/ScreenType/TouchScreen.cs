@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace VRSN.Lab1
 {
@@ -14,10 +11,20 @@ namespace VRSN.Lab1
             Console.WriteLine("The screen has been touched and something is going to happen...");
         }
 
+        public abstract int TouchLimit { get; }
+
         public override string Type() 
         {
             return "This device has a Touch screen";
         }
 
+        public override string ToString()
+        {
+            var result = new StringBuilder();
+            result.AppendLine(base.ToString());
+            result.AppendLine("This screen can be touched this number of times: "+  TouchLimit);
+
+            return result.ToString();
+        }
     }
 }

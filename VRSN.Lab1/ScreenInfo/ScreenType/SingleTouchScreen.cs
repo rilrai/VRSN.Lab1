@@ -23,5 +23,13 @@ namespace VRSN.Lab1
         {
             return "This device has a Single Touch screen";
         }
+
+        public override int TouchLimit
+        {
+            get
+            {
+                return 1;
+            }
+        }
     }
 }
