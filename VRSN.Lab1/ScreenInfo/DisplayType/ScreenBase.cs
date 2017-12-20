@@ -1,7 +1,5 @@
-﻿namespace VRSN.Lab1 
-{
-    public abstract class ScreenBase 
-    {
+﻿namespace VRSN.Lab1.ScreenInfo.DisplayType {
+    public abstract class ScreenBase {
         public abstract void Show(IScreenImage screenImage);
     }
 }

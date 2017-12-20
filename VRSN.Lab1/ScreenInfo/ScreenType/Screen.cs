@@ -1,10 +1,8 @@
 ﻿using System.Text;
+using VRSN.Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1
-{
-    public abstract class Screen
-    {
-
+namespace VRSN.Lab1.ScreenInfo.ScreenType {
+    public abstract class Screen {
         public int Height { get; set; }
 
         public int Width { get; set; }
@@ -15,8 +13,15 @@ namespace VRSN.Lab1
 
         public ScreenBase Dysplay { get; set; }
 
-        public string Size() 
-        {
+        public Screen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase) {
+            Height = height;
+            Width = width;
+            NumberOfColors = numOfColors;
+            Resolution = resolution;
+            Dysplay = screenBase;
+        }
+    
+        public string Size() {
             return Height + "x" + Width;
         }
 
@@ -24,8 +29,7 @@ namespace VRSN.Lab1
 
         public abstract string Type();
 
-        public override string ToString()
-        {
+        public override string ToString() {
             var info = new StringBuilder();
             info.AppendLine("Screen parameters are:");
             info.AppendLine(this.Type());

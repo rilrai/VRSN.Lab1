@@ -1,35 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using VRSN.Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1
-{
-    class SingleTouchScreen : TouchScreen 
-    {
-
-        public SingleTouchScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase) 
-        {
-            Height = height;
-            Width = width;
-            NumberOfColors = numOfColors;
-            Resolution = resolution;
-            Dysplay = screenBase;
-
+namespace VRSN.Lab1.ScreenInfo.ScreenType {
+    class SingleTouchScreen : TouchScreen {
+        public SingleTouchScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase)
+            : base(height, width, numOfColors, resolution, screenBase) {
         }
 
-        public override string Type() 
-        {
+        public override string Type() {
             return "This device has a Single Touch screen";
         }
 
-        public override int TouchLimit
-        {
-            get
-            {
-                return 1;
-            }
+        public override int TouchLimit {
+            get { return 1; }
         }
     }
 }

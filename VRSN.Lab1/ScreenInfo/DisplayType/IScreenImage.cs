@@ -1,7 +1,5 @@
-﻿namespace VRSN.Lab1
-{
-    public interface IScreenImage 
-    {
+﻿namespace VRSN.Lab1.ScreenInfo.DisplayType {
+    public interface IScreenImage {
         string Description { get; set; }
     }
 }

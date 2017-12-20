@@ -1,23 +1,18 @@
 ﻿using System;
 
-namespace VRSN.Lab1 
-{
-    public class Battery 
-    {
-        public int Capacity
-        {
-            get; set;
+namespace VRSN.Lab1.BatteryInfo {
+    public class Battery {
+        public int Capacity { get; set; }
+        public BatteryTypes Type { get; set; }
+        public bool IsRemovable { get; set; }
+
+        public Battery(BatteryTypes type, int capacity, bool isRemovable) {
+            Type = type;
+            Capacity = capacity;
+            IsRemovable = isRemovable;
         }
-        public BatteryTypes Type
-        {
-            get; set;
-        }
-        public bool IsRemovable
-        {
-            get; set;
-        }
-        public override string ToString() 
-        {
+
+        public override string ToString() {
             string statement;
             if (IsRemovable)
             {
@@ -27,14 +22,8 @@ namespace VRSN.Lab1
             {
                 statement = "This is a monolithic block";
             }
-            statement += String.Format(" with {0} battery and capacity of {1}",Type, Capacity);
+            statement += $" with {Type} battery and capacity of {Capacity}";
             return statement;
-        }
-        public Battery(BatteryTypes type, int capacity, bool isRemovable)
-        {
-            Type = type;
-            Capacity = capacity;
-            IsRemovable = isRemovable;
         }
     }
 }
