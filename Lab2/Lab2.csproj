@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mobile.cs" />
     <Compile Include="PhoneJack\HtcHeadset.cs" />
     <Compile Include="PhoneJack\IOutput.cs" />
     <Compile Include="PhoneJack\IPlayback.cs" />

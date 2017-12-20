@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VRSN.Lab1.PhoneJack {
+namespace Lab2.PhoneJack {
     public class HtcHeadset : IPlayback {
         private IOutput _output;
 

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using VRSN.Lab1.ScreenInfo.DisplayType;
+using Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1.ScreenInfo.ScreenType {
+namespace Lab1.ScreenInfo.ScreenType {
     public abstract class TouchScreen : Screen {
         public TouchScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase)
             : base(height, width, numOfColors, resolution, screenBase) {

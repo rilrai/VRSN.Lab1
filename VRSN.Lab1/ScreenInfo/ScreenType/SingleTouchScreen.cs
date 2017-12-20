@@ -1,6 +1,6 @@
-﻿using VRSN.Lab1.ScreenInfo.DisplayType;
+﻿using Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1.ScreenInfo.ScreenType {
+namespace Lab1.ScreenInfo.ScreenType {
     class SingleTouchScreen : TouchScreen {
         public SingleTouchScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase)
             : base(height, width, numOfColors, resolution, screenBase) {

@@ -1,4 +1,4 @@
-﻿namespace VRSN.Lab1.PhoneJack {
+﻿namespace Lab2.PhoneJack {
     public interface IOutput {
         void Write(string text);
         void WriteLine(string text);                      

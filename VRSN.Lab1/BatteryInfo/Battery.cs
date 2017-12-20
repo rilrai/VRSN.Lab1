@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace VRSN.Lab1.BatteryInfo {
+﻿namespace Lab1.BatteryInfo {
     public class Battery {
         public int Capacity { get; set; }
         public BatteryTypes Type { get; set; }

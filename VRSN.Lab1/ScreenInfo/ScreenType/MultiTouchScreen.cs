@@ -1,7 +1,7 @@
 ﻿using System;
-using VRSN.Lab1.ScreenInfo.DisplayType;
+using Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1.ScreenInfo.ScreenType {
+namespace Lab1.ScreenInfo.ScreenType {
     class MultiTouchScreen : TouchScreen {
         public MultiTouchScreen(int height, int width, int numOfColors, string resolution, ScreenBase screenBase, int touchLimit)
             : base(height, width, numOfColors, resolution, screenBase) {

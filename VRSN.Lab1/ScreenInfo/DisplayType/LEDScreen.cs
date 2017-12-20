@@ -1,7 +1,6 @@
 ﻿using System;
-using VRSN.Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1.ScreenInfo.DisplayType {
+namespace Lab1.ScreenInfo.DisplayType {
     public class LedScreen : ColorScreen {
         public override void Show(IScreenImage screenImage) {
             Console.WriteLine(

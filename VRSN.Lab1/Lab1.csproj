@@ -7,8 +7,8 @@
     <ProjectGuid>{48C41EFF-FA42-48FE-AB96-A20BA990D9C7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VRSN.Lab1</RootNamespace>
-    <AssemblyName>VRSN.Lab1</AssemblyName>
+    <RootNamespace>Lab1</RootNamespace>
+    <AssemblyName>Lab1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -1,4 +1,4 @@
-﻿namespace VRSN.Lab1.BatteryInfo {
+﻿namespace Lab1.BatteryInfo {
     public enum BatteryTypes {
         NickelCadmium,
         NiMh,

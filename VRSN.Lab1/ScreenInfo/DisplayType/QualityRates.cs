@@ -1,4 +1,4 @@
-﻿namespace VRSN.Lab1.ScreenInfo.DisplayType {
+﻿namespace Lab1.ScreenInfo.DisplayType {
     public enum QualityRates {
         Low,
         Medium,

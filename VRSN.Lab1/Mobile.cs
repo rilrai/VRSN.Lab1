@@ -1,7 +1,7 @@
-﻿using VRSN.Lab1.BatteryInfo;
-using VRSN.Lab1.ScreenInfo.ScreenType;
+﻿using Lab1.BatteryInfo;
+using Lab1.ScreenInfo.ScreenType;
 
-namespace VRSN.Lab1 {
+namespace Lab1 {
     class Mobile {
         public Screen MobScreen { get; set; }
 

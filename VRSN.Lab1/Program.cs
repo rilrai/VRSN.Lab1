@@ -1,9 +1,9 @@
 ﻿using System;
-using VRSN.Lab1.BatteryInfo;
-using VRSN.Lab1.ScreenInfo.DisplayType;
-using VRSN.Lab1.ScreenInfo.ScreenType;
+using Lab1.BatteryInfo;
+using Lab1.ScreenInfo.DisplayType;
+using Lab1.ScreenInfo.ScreenType;
 
-namespace VRSN.Lab1 {
+namespace Lab1 {
     class Program {
         static void Main(string[] args) {
             ScreenBase retina = new RetinaScreen();

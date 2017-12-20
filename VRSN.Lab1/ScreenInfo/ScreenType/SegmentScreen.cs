@@ -1,7 +1,7 @@
 ﻿using System;
-using VRSN.Lab1.ScreenInfo.DisplayType;
+using Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1.ScreenInfo.ScreenType {
+namespace Lab1.ScreenInfo.ScreenType {
     class SegmentScreen : Screen {
         public override string Type() {
             return "This device has a Segment screen";

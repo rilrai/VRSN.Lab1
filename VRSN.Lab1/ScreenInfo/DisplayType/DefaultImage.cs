@@ -1,4 +1,4 @@
-﻿namespace VRSN.Lab1.ScreenInfo.DisplayType {
+﻿namespace Lab1.ScreenInfo.DisplayType {
     public class DefaultImage : IScreenImage {
         public string Description { get; set; }
         public QualityRates Quality { get; set; }

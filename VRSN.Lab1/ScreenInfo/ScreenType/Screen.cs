@@ -1,7 +1,7 @@
 ﻿using System.Text;
-using VRSN.Lab1.ScreenInfo.DisplayType;
+using Lab1.ScreenInfo.DisplayType;
 
-namespace VRSN.Lab1.ScreenInfo.ScreenType {
+namespace Lab1.ScreenInfo.ScreenType {
     public abstract class Screen {
         public int Height { get; set; }
 

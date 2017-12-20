@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace VRSN.Lab1 {
+namespace Lab1 {
     public class Microphone {
         private bool _isMuted;
 
