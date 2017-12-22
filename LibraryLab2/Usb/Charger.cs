@@ -1,5 +1,4 @@
 ﻿using System;
-using LibraryLab2.PhoneJack;
 
 namespace LibraryLab2.Usb {
     public class Charger : IUsb {
