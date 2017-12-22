@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mobile.cs" />
+    <Compile Include="Usb\Charger.cs" />
+    <Compile Include="Usb\IUsb.cs" />
+    <Compile Include="Usb\Dynamics.cs" />
+    <Compile Include="Usb\GameConsole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PhoneJack\HtcHeadset.cs" />
     <Compile Include="PhoneJack\IOutput.cs" />
