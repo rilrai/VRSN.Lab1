@@ -1,4 +1,4 @@
-﻿namespace Lab2.PhoneJack {
+﻿namespace LibraryLab2.PhoneJack {
     public interface IPlayback {
         void Play(object data);
     }

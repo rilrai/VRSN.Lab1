@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Lab2.PhoneJack;
+﻿using LibraryLab2.PhoneJack;
 
-namespace Lab2 {
+namespace LibraryLab2 {
     public class Mobile {
         public IPlayback PlaybackComponent { get; set; }
+
+        public Mobile(IPlayback playback) {
+            PlaybackComponent = playback;
+        }
 
         public void Play(object data) {
             PlaybackComponent.Play(data);
