@@ -2,7 +2,7 @@
 using LibraryLab2.PhoneJack;
 
 namespace Lab2 {
-    class ConsoleOutput : IOutput {
+    public class ConsoleOutput : IOutput {
         public void Write(string text) {
             Console.Write(text);
         }

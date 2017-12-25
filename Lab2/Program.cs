@@ -72,6 +72,8 @@ namespace Lab2 {
             Mobile mobile = new Mobile(playback,usbDevice);
             mobile.Play(new object());
             mobile.UsbDevice.Use(new object());
+
+            Console.ReadKey();
         }
     }
 }
