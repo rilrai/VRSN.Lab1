@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormForLab2", "FormForLab2\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryLab2", "LibraryLab2\LibraryLab2.csproj", "{B0D938BC-CEDE-48DA-B0BF-30A3DBA1FA59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2Tests", "Lab2Tests\Lab2Tests.csproj", "{CF334C03-37F6-453D-916B-2A03CF0B2148}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabsTests", "Lab2Tests\LabsTests.csproj", "{CF334C03-37F6-453D-916B-2A03CF0B2148}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3Form", "Lab3Form\Lab3Form.csproj", "{6E11DE35-85E5-4C86-BE7D-0527C2F8CE48}"
 EndProject

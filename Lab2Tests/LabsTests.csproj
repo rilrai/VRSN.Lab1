@@ -33,6 +33,7 @@
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lab2UnitTests.cs" />
+    <Compile Include="Lab3UnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -49,10 +51,17 @@
       <Project>{6e067c4f-6b87-4f13-85f8-e34883535e3e}</Project>
       <Name>Lab2</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lab3Form\Lab3Form.csproj">
+      <Project>{6e11de35-85e5-4c86-be7d-0527c2f8ce48}</Project>
+      <Name>Lab3Form</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibraryLab2\LibraryLab2.csproj">
       <Project>{b0d938bc-cede-48da-b0bf-30a3dba1fa59}</Project>
       <Name>LibraryLab2</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,19 +13,19 @@ namespace Lab3Form {
 
         private FormatDelegate _formatter = FormatTimeFirst;
 
-        private static string FormatTimeFirst(string message) {
+        public static string FormatTimeFirst(string message) {
             return $"[{DateTime.Now}] {message} {Environment.NewLine}";
         }
 
-        private static string FormatTimeLast(string message) {
+        public static string FormatTimeLast(string message) {
             return $"{message} [{DateTime.Now}] {Environment.NewLine}";
         }
 
-        private static string FormatTimeFirstAndUpper(string message) {
+        public static string FormatTimeFirstAndUpper(string message) {
             return $"[{DateTime.Now}] {message.ToUpper()} {Environment.NewLine}";
         }
 
-        private static string FormatTimeLastAndUpper(string message) {
+        public static string FormatTimeLastAndUpper(string message) {
             return $"{message.ToUpper()} [{DateTime.Now}] {Environment.NewLine}";
         }
 
@@ -51,7 +51,7 @@ namespace Lab3Form {
         public static int ThreadCount = 1;
 
         private void SmsFormatter() {
-            Mobile mobile = new Mobile(new SmsReceiver());
+            MobileLab3 mobile = new MobileLab3(new SmsReceiver());
 
             mobile.Sms.SmsReceived += OnSmsReceived;
 

@@ -1,8 +1,8 @@
 ﻿namespace Lab3Form {
-    public class Mobile {
+    public class MobileLab3 {
         public SmsReceiver Sms { get; set; }
 
-        public Mobile(SmsReceiver smsReceiver) {
+        public MobileLab3(SmsReceiver smsReceiver) {
             Sms = smsReceiver;
         }
 
