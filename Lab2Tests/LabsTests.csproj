@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Lab2UnitTests.cs" />
     <Compile Include="Lab3UnitTest.cs" />
+    <Compile Include="Lab4UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +55,10 @@
     <ProjectReference Include="..\Lab3Form\Lab3Form.csproj">
       <Project>{6e11de35-85e5-4c86-be7d-0527c2f8ce48}</Project>
       <Name>Lab3Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab4Form\Lab4Form.csproj">
+      <Project>{1cd7041b-b5dc-4fb6-bd74-30eebfc339c8}</Project>
+      <Name>Lab4Form</Name>
     </ProjectReference>
     <ProjectReference Include="..\LibraryLab2\LibraryLab2.csproj">
       <Project>{b0d938bc-cede-48da-b0bf-30a3dba1fa59}</Project>

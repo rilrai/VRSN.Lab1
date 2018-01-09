@@ -13,6 +13,9 @@ namespace Lab4Form {
                 this.comboBox3.Items.Add(new DateTime(2018, 1, i));
                 this.comboBox4.Items.Add(new DateTime(2018, 1, i));
             }
+            comboBox1.SelectedIndex = 1;
+            comboBox3.SelectedIndex = 0;
+            comboBox4.SelectedIndex = comboBox4.Items.Count - 1;
         }
 
         private delegate string FormatDelegate(Message message);
@@ -39,13 +42,18 @@ namespace Lab4Form {
 
         public static int ThreadCount = 1;
 
-        private void SmsFormatter(string from) {
+        private void SmsFormatter() {
             Random random = new Random();
             mobile.Storage.SmsAdded += OnSmsReceived;
 
             Thread currentThread = new Thread(start: () => {
-                Timer timer = new Timer((sender) => { mobile.Storage.Add(new Message(from, DateTime.Now)); }, null, 1000,
-                    2000);
+                Timer timer =
+                    new Timer(
+                        (sender) => {
+                            mobile.Storage.Add(new Message(mobile.Storage.Senders[random.Next(4)], DateTime.Now));
+                        }, null,
+                        1000,
+                        2000);
             });
             currentThread.Start();
         }
@@ -85,23 +93,11 @@ namespace Lab4Form {
             string search = textBox3.Text;
             IEnumerable<Message> displayMessages;
 
-            if (radioButton1.Checked) {
-                displayMessages = from s in mobile.Storage.Messages
-                    where s.Sender == transmitter
-                          && s.Date >= fromDate
-                          && s.Date <= toDate
-                          && s.Text.Contains(search)
-                    select s
-                    ;
+            if (radioButton2.Checked) {
+                displayMessages = DataSelector(mobile, transmitter, fromDate, toDate, search, "AND");
             }
             else {
-                displayMessages = from s in mobile.Storage.Messages
-                    where s.Sender == transmitter
-                          || s.Date >= fromDate
-                          || s.Date <= toDate
-                          || s.Text.Contains(search)
-                    select s
-                    ;
+                displayMessages = DataSelector(mobile, transmitter, fromDate, toDate, search, "OR");
             }
 
             foreach (var message in displayMessages) {
@@ -109,11 +105,38 @@ namespace Lab4Form {
                 richTextBox1.AppendText(formattedMessage);
             }
 
-            SmsFormatter(transmitter);
+            SmsFormatter();
         }
 
         private void button2_Click(object sender, EventArgs e) {
             mobile.Storage.Fill(10);
+        }
+
+        public static IEnumerable<Message> DataSelector(MobileLab4 mob, String transmitter, DateTime fromDate, DateTime toDate, string search,
+            string condition) {
+            IEnumerable<Message> displayMessages = new List<Message>();
+            switch (condition) {
+                case "AND":
+                    displayMessages = from s in mob.Storage.Messages
+                        where s.Sender == transmitter
+                              && s.Date >= fromDate
+                              && s.Date <= toDate
+                              && s.Text.Contains(search)
+                        select s
+                        ;
+                    break;
+                case "OR":
+                    displayMessages = from s in mob.Storage.Messages
+                        where s.Sender == transmitter
+                              || s.Date >= fromDate
+                              || s.Date <= toDate
+                              || s.Text.Contains(search)
+                        select s
+                        ;
+                    break;
+            }
+
+            return displayMessages;
         }
     }
 }

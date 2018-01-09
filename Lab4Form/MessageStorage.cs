@@ -43,6 +43,7 @@ namespace Lab4Form {
         }
 
         public delegate void SmsAddedDelegate(Message message);
+
         public delegate void SmsRemovedDelegate(Message message);
 
         public event SmsAddedDelegate SmsAdded;
@@ -55,6 +56,5 @@ namespace Lab4Form {
         public void RaiseSmsRemovedEvent(Message message) {
             SmsRemoved?.Invoke(message);
         }
-
     }
 }

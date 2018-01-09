@@ -32,7 +32,7 @@ namespace Lab2Tests {
         }
 
         [TestMethod()]
-        private void FormatTimeFirstAndUpperTest() {
+        public void FormatTimeFirstAndUpperTest() {
             string sms = "Message received";
             string expected = $"{sms.ToUpper()} [{DateTime.Now}] {Environment.NewLine}";
             string current = Lab3Form.MessageBox.FormatTimeLastAndUpper(sms);

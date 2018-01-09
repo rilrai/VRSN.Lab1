@@ -67,10 +67,10 @@
             // 
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "Text last",
+            "Text first",
+            "Text last with UPPER",
+            "Text first with UPPER"});
             this.comboBox2.Location = new System.Drawing.Point(143, 60);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(235, 21);
@@ -79,22 +79,22 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(244, 142);
+            this.radioButton1.Location = new System.Drawing.Point(311, 142);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(41, 17);
             this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
             this.radioButton1.Text = "OR";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(310, 142);
+            this.radioButton2.Checked = true;
+            this.radioButton2.Location = new System.Drawing.Point(227, 142);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(48, 17);
             this.radioButton2.TabIndex = 5;
+            this.radioButton2.TabStop = true;
             this.radioButton2.Text = "AND";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
