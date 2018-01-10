@@ -64,7 +64,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(232, 21);
             this.progressBar1.TabIndex = 4;
-            this.progressBar1.Value = 40;
+            this.progressBar1.Value = 42;
             // 
             // Form1
             // 

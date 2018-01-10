@@ -10,22 +10,11 @@ namespace Lab5Form {
 
             mobile.Sms.SmsReceived += OnSmsReceived;
 
-            batteryUse = new Thread(start: () => {
-                Timer timer = new Timer(sender => { SafeBatteryDecrease(); }, null, 1000, 1500);
-            });
-            batteryUse.Start();
-
-            batteryCharge = new Thread(start: () => {
-                Timer timer = new Timer(sender => { SafeBatteryIncrease(); }, null, 1000, 1500);
-            });
+            battery.StartThreads(progressBar1);
         }
 
         static MobileLab5 mobile = new MobileLab5(new SmsReceiver());
         private bool _messageSenderOn;
-        private bool _chargerOn = false;
-
-        private Thread batteryUse;
-        private Thread batteryCharge;
 
         readonly Thread _messageSender = new Thread(start: () => {
             Timer timer = new Timer(send => { mobile.ReceiveSms("pupipu from thread"); }, null, 1000, 2000);
@@ -52,6 +41,13 @@ namespace Lab5Form {
 
             richTextBox1.AppendText($"{message} {Environment.NewLine}");
         }
+
+        // ----------------------------------------------------
+        // Battery functionality
+        // ----------------------------------------------------
+
+        private Battery battery = new Battery();
+
         delegate void SafeProgressBarDelegate();
 
         private void SafeBatteryDecrease() {
@@ -60,49 +56,31 @@ namespace Lab5Form {
                 Invoke(d, new object[] {});
             }
             else {
-                progressBar1.Value--;
+                battery.ChargeLevel--;
+                progressBar1.Value = battery.ChargeLevel;
             }
         }
 
         private void SafeBatteryIncrease() {
             if (progressBar1.InvokeRequired) {
-                SafeProgressBarDelegate d = SafeBatteryDecrease;
-                Invoke(d, new object[] { });
+                SafeProgressBarDelegate d = SafeBatteryIncrease;
+                Invoke(d, new object[] {});
             }
             else {
-                progressBar1.Value++;
+                battery.ChargeLevel+=3;
+                progressBar1.Value = battery.ChargeLevel;
             }
         }
-
-        private void BatteryUseThreadControl() {
-            ThreadSwitch threadSwitch = new ThreadSwitch(new ThreadController());
-            threadSwitch.Controller.ThreadStatusChanged += OnChargerSwitch(_chargerOn);
-        }
-
-
-        private void OnChargerSwitch(bool flag) {
-            if (InvokeRequired) {
-                Invoke(new ThreadController.ThreadControllerDelegate(OnChargerSwitch), flag);
-            }
-
-            Thread.Sleep(Timeout.Infinite);
-        }
-        
 
         private void button3_Click(object sender, EventArgs e) {
-            if (_chargerOn) {
-                batteryUse.Start();
-                batteryCharge.Interrupt();
-                button2.Text = "Stop charging";
+            if (battery.IsCharging) {
+                battery.IsCharging = false;
+                button3.Text = "Stop charging";
             }
             else {
-                batteryUse.Interrupt();
-                batteryCharge.Start();
-                button2.Text = "Start charging";
+                battery.IsCharging = true;
+                button3.Text = "Start charging";
             }
-            
         }
-
-
     }
 }
