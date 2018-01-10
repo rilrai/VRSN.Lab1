@@ -52,7 +52,7 @@ namespace Lab2Tests {
         //
 
         [TestMethod]
-        public void DataSelectorTest() {
+        public void DataSelectorTest1() {
             MobileLab4 mobile = new MobileLab4();
             Message message1 = new Message("Petya", DateTime.Now);
             Message message2 = new Message("Masha", DateTime.Now);
@@ -61,22 +61,37 @@ namespace Lab2Tests {
 
             List<Message> expected = new List<Message>();
             expected.Add(message1);
-            
+
             List<Message> current = MessageBoxLab4.DataSelector(
                 mobile, "Petya", new DateTime(2018, 1, 1), new DateTime(2018, 12, 31), "text", "AND").ToList();
 
             Assert.IsTrue(expected.ToString().Equals(current.ToString()));
+        }
 
-            current = MessageBoxLab4.DataSelector(
+        public void DataSelectorTest2() {
+            MobileLab4 mobile = new MobileLab4();
+            Message message1 = new Message("Petya", DateTime.Now);
+            Message message2 = new Message("Masha", DateTime.Now);
+            mobile.Storage.Add(message1);
+            mobile.Storage.Add(message2);
+
+            List<Message> current = MessageBoxLab4.DataSelector(
                 mobile, "Masha", new DateTime(2018, 1, 1), new DateTime(2018, 1, 2), "text", "AND").ToList();
-            
-            Assert.IsTrue(current.Count == 0);
 
-            current = MessageBoxLab4.DataSelector(
+            Assert.IsTrue(current.Count == 0);
+        }
+
+        public void DataSelectorTest3() {
+            MobileLab4 mobile = new MobileLab4();
+            Message message1 = new Message("Petya", DateTime.Now);
+            Message message2 = new Message("Masha", DateTime.Now);
+            mobile.Storage.Add(message1);
+            mobile.Storage.Add(message2);
+
+            List<Message> current = MessageBoxLab4.DataSelector(
                 mobile, "Masha", new DateTime(2018, 1, 1), new DateTime(2018, 1, 2), "text", "OR").ToList();
 
             Assert.IsTrue(mobile.Storage.Messages.ToString().Equals(current.ToString()));
-
         }
     }
 }
