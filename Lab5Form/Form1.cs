@@ -9,26 +9,25 @@ namespace Lab5Form {
             InitializeComponent();
 
             mobile.Sms.SmsReceived += OnSmsReceived;
-
+            messageSender.StartSender();
             battery.StartThreads(progressBar1);
         }
+        
+        // -----------------------------------------------------
+        // Message sending
+        // -----------------------------------------------------
 
         static MobileLab5 mobile = new MobileLab5(new SmsReceiver());
-        private bool _messageSenderOn;
 
-        readonly Thread _messageSender = new Thread(start: () => {
-            Timer timer = new Timer(send => { mobile.ReceiveSms("pupipu from thread"); }, null, 1000, 2000);
-        });
+        private MessageSender messageSender = new MessageSender(mobile);
 
         private void button2_Click(object sender, EventArgs e) {
-            if (!_messageSenderOn) {
-                _messageSenderOn = true;
-                _messageSender.Start();
+            if (!messageSender.MessageSenderOn) {
+                messageSender.MessageSenderOn = true;
                 button2.Text = "Stop sending messages";
             }
             else {
-                _messageSenderOn = false;
-                _messageSender.Interrupt();
+                messageSender.MessageSenderOn = false;
                 button2.Text = "Start sending messages";
             }
         }
@@ -47,30 +46,6 @@ namespace Lab5Form {
         // ----------------------------------------------------
 
         private Battery battery = new Battery();
-
-        delegate void SafeProgressBarDelegate();
-
-        private void SafeBatteryDecrease() {
-            if (progressBar1.InvokeRequired) {
-                SafeProgressBarDelegate d = SafeBatteryDecrease;
-                Invoke(d, new object[] {});
-            }
-            else {
-                battery.ChargeLevel--;
-                progressBar1.Value = battery.ChargeLevel;
-            }
-        }
-
-        private void SafeBatteryIncrease() {
-            if (progressBar1.InvokeRequired) {
-                SafeProgressBarDelegate d = SafeBatteryIncrease;
-                Invoke(d, new object[] {});
-            }
-            else {
-                battery.ChargeLevel+=3;
-                progressBar1.Value = battery.ChargeLevel;
-            }
-        }
 
         private void button3_Click(object sender, EventArgs e) {
             if (battery.IsCharging) {

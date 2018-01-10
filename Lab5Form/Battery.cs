@@ -62,9 +62,9 @@ namespace Lab5Form {
         }
 
         public void StartThreads(ProgressBar bar) {
-            Thread useThread = new Thread(new ThreadStart(() => BatteryUsing(bar)));
+            Thread useThread = new Thread(start: () => BatteryUsing(bar));
             useThread.Start();
-            Thread chargeThread = new Thread(new ThreadStart(() => BatteryCharging(bar)));
+            Thread chargeThread = new Thread(start: () => BatteryCharging(bar));
             chargeThread.Start();
         }
     }
