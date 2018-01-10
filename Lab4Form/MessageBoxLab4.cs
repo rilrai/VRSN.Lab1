@@ -60,7 +60,7 @@ namespace Lab4Form {
 
         private void OnSmsReceived(Message message) {
             if (InvokeRequired) {
-                Invoke(new SmsReceiver.SmsReceivedDelegate(OnSmsReceived), message);
+                Invoke(new MessageStorage.SmsAddedDelegate(OnSmsReceived), message);
                 return;
             }
 
