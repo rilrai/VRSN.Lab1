@@ -3,7 +3,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace Lab5Form {
-    class Battery {
+    abstract class BatteryBasis {
         private int _chargeLevel;
 
         public int ChargeLevel {
@@ -22,11 +22,6 @@ namespace Lab5Form {
         }
 
         public bool IsCharging { get; set; }
-
-        public Battery() {
-            _chargeLevel = 42;
-            IsCharging = false;
-        }
 
         public void BatteryUsing(ProgressBar bar) {
             while (true) {
@@ -61,11 +56,6 @@ namespace Lab5Form {
             }
         }
 
-        public void StartThreads(ProgressBar bar) {
-            Thread useThread = new Thread(start: () => BatteryUsing(bar));
-            useThread.Start();
-            Thread chargeThread = new Thread(start: () => BatteryCharging(bar));
-            chargeThread.Start();
-        }
+        public abstract void StartThreads(ProgressBar bar);
     }
 }

@@ -10,7 +10,7 @@ namespace Lab5Form {
 
             mobile.Sms.SmsReceived += OnSmsReceived;
             messageSender.StartSender();
-            battery.StartThreads(progressBar1);
+            _batteryWithThreads.StartThreads(progressBar1);
         }
         
         // -----------------------------------------------------
@@ -45,16 +45,16 @@ namespace Lab5Form {
         // Battery functionality
         // ----------------------------------------------------
 
-        private Battery battery = new Battery();
+        private BatteryWithThreads _batteryWithThreads = new BatteryWithThreads();
 
         private void button3_Click(object sender, EventArgs e) {
-            if (battery.IsCharging) {
-                battery.IsCharging = false;
-                button3.Text = "Stop charging";
+            if (_batteryWithThreads.IsCharging) {
+                _batteryWithThreads.IsCharging = false;
+                button3.Text = "Start charging";
             }
             else {
-                battery.IsCharging = true;
-                button3.Text = "Start charging";
+                _batteryWithThreads.IsCharging = true;
+                button3.Text = "Stop charging";
             }
         }
     }
