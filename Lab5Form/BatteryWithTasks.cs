@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Lab5Form {
-    class BatteryWithTasks : BatteryBasis {
+    public class BatteryWithTasks : BatteryBasis {
         public Task ChargeTask;
         public Task UseTask;
 

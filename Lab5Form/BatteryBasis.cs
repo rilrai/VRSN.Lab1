@@ -3,7 +3,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace Lab5Form {
-    abstract class BatteryBasis {
+    public abstract class BatteryBasis {
         private int _chargeLevel;
 
         public int ChargeLevel {
