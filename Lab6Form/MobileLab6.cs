@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq.Expressions;
 
 namespace Lab6Form {
     public class MobileLab6 {
