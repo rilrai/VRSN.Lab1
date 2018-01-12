@@ -32,7 +32,7 @@ namespace Lab2Tests {
         }
 
         [TestMethod]
-        public void BatteryUsingTest1() {
+        public void BatteryUsingWithThreadsTest() {
             MobileLab5 mob = new MobileLab5(new SmsReceiver());
             BatteryWithThreads battery = new BatteryWithThreads();
             int startingChargeLevel = battery.ChargeLevel;
@@ -46,7 +46,7 @@ namespace Lab2Tests {
         }
 
         [TestMethod]
-        public void BatteryUsingTest2() {
+        public void BatteryUsingWithTasksTest() {
             MobileLab5 mob = new MobileLab5(new SmsReceiver());
             BatteryWithTasks battery = new BatteryWithTasks();
             int startingChargeLevel = battery.ChargeLevel;

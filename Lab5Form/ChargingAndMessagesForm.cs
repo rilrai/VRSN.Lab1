@@ -4,8 +4,8 @@ using System.Windows.Forms;
 using Timer = System.Threading.Timer;
 
 namespace Lab5Form {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class ChargingAndMessagesForm : Form {
+        public ChargingAndMessagesForm() {
             InitializeComponent();
 
             mobile.Sms.SmsReceived += OnSmsReceived;
@@ -37,7 +37,11 @@ namespace Lab5Form {
                 return;
             }
 
-            if (richTextBox1 != null) richTextBox1.AppendText($"{message} {Environment.NewLine}");
+            richTextBox1?.AppendText($"{message} {Environment.NewLine}");
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e) {
+            messageSender.MessageSenderOn = false;
         }
 
         // ----------------------------------------------------

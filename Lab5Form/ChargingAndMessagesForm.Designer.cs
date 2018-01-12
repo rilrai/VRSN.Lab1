@@ -1,5 +1,5 @@
 ﻿namespace Lab5Form {
-    partial class Form1 {
+    partial class ChargingAndMessagesForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
