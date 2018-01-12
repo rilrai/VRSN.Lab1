@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Lab6Form {
-    public class Call : IComparable {
+    public class Call {
         public string Name { get; set; }
 
         public bool IsIncoming;
@@ -20,12 +20,15 @@ namespace Lab6Form {
             CallEndTime = DateTime.Now;
         }
 
-        public int CompareTo(object obj) {            
+        public override bool Equals(object obj) {
             if (obj == null || (obj.GetType() == typeof(Call))) {
-                return 1;
+                return false;
             }
-            Call call = (Call) obj;
-            return CallStartTime.CompareTo(call.CallStartTime);
+            Call call = (Call)obj;
+            bool isEqual = Name == call.Name;
+            isEqual &= IsIncoming == call.IsIncoming;
+
+            return isEqual;
         }
     }
 }
