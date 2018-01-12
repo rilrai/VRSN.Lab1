@@ -46,6 +46,7 @@
     <Compile Include="Lab3UnitTest.cs" />
     <Compile Include="Lab4UnitTests.cs" />
     <Compile Include="Lab5UnitTests.cs" />
+    <Compile Include="Lab6UnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +65,10 @@
     <ProjectReference Include="..\Lab5Form\Lab5Form.csproj">
       <Project>{1943f830-f1a8-43d5-b4f6-f3fed62e1acf}</Project>
       <Name>Lab5Form</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab6Form\Lab6Form.csproj">
+      <Project>{84a50349-9921-4204-9bd4-671a07484960}</Project>
+      <Name>Lab6Form</Name>
     </ProjectReference>
     <ProjectReference Include="..\LibraryLab2\LibraryLab2.csproj">
       <Project>{b0d938bc-cede-48da-b0bf-30a3dba1fa59}</Project>

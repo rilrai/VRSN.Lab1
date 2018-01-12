@@ -2,8 +2,8 @@
 using System.Windows.Forms;
 
 namespace Lab6Form {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class CallsForm : Form {
+        public CallsForm() {
             InitializeComponent();
 
             mobile.Receiver.CallReceived += OnCallReceived;
