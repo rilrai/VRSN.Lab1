@@ -28,7 +28,7 @@ namespace Lab6Form {
         }
 
         public int CompareTo(object obj) {
-            if (obj == null || (obj.GetType() == typeof(CallGroup))) {
+            if (obj == null || (obj.GetType() != typeof(CallGroup))) {
                 return 1;
             }
             CallGroup callGroup = (CallGroup) obj;           

@@ -34,10 +34,12 @@ namespace Lab6Form {
             while (true) {
                 if (CallSenderOn) {
                     string name = _mob.ContactList[_rnd.Next(_mob.ContactList.Count)].Name;
-                    bool isIncoming = _rnd.Next(100) <= 20 ? true : false;
-                    mob.ReceiveCall(new Call(name, isIncoming));
-                    int sleepTime = (_rnd.Next(5)+1)*1000;
-                    Thread.Sleep(sleepTime);
+                    bool isIncoming = _rnd.Next(100) <= 40;
+                    Call call = new Call(name, isIncoming);
+                    call.CallEndTime = call.CallStartTime.AddSeconds(_rnd.Next(20));
+
+                    mob.ReceiveCall(call);
+                    Thread.Sleep(2000);                    
                 }
             }
         }

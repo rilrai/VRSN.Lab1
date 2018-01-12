@@ -16,12 +16,8 @@ namespace Lab6Form {
             CallStartTime = DateTime.Now;
         }
 
-        public void EndCall() {
-            CallEndTime = DateTime.Now;
-        }
-
         public override bool Equals(object obj) {
-            if (obj == null || (obj.GetType() == typeof(Call))) {
+            if (obj == null || (obj.GetType() != typeof(Call))) {
                 return false;
             }
             Call call = (Call)obj;

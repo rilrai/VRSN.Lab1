@@ -45,7 +45,7 @@ namespace Lab6Form {
                 Invoke(new CallReceiver.CallReceivedDelegate(OnCallReceived), call);
                 return;
             }
-            
+
             mobile.AddCalls(call);
             RefreshCallsInListView();
         }
