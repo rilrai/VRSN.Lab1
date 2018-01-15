@@ -26,5 +26,12 @@ namespace Lab6Form {
 
             return isEqual;
         }
+
+        public override int GetHashCode() {
+            int hash = 13;
+            hash = (hash*7) + Name.GetHashCode();
+            hash = (hash*7) + IsIncoming.GetHashCode();
+            return hash;
+        }
     }
 }
